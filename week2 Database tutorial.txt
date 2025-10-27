@@ -1,0 +1,27 @@
+week2 Database tutorial
+ 
+section 2:
+
+1. 
+select  CUSTNAME from customer c, invoice i where c.custabn= i.custabn and i.invoice = 12;
+
+2.
+
+SELECT distinct c.CUSTNAME 
+FROM CUSTOMER c, INVOICE i, INVoiceITEM ii, ITEM it
+WHERE c.CUSTABN = i.CUSTABN 
+AND i.INVOICENO = ii.INVOICENO 
+AND ii.ITEMNO = it.ITEMNO
+AND it.ITEMDESC LIKE '%Tube%';
+
+3. SELECT c.CUSTNAME 
+FROM CUSTOMER c, INVOICE i, INVoiceITEM ii, ITEM it
+WHERE c.CUSTABN = i.CUSTABN 
+AND i.INVOICENO = ii.INVOICENO 
+AND ii.ITEMNO = it.ITEMNO
+AND  it.ITEMDESC LIKE '%Screen%'
+AND (c.CUSTSTATE = 'NSW' OR c.CUSTSTATE = 'QLD'); 
+
+
+
+ 
